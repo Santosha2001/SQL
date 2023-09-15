@@ -60,8 +60,25 @@ insert into student_info values(1002,'bindhu','cse',100,now(),now());
 insert into student_info values(1003,'ramesh','ece',101,now(),now());
 insert into student_info values(1004,'madhu','mech',104,now(),now());
 
+select * from student_info;
 
+/*instring*/
+select s_name,instr(s_name, 'a') as position from student_info;
 
+/*substring
+string, startposition,numberOfCharecters
+*/
+select substr('Dscanagere',3,3);
+select substr('Dscanagere',3,15);
+
+select * from student_info;
+
+/*duplicating the table*/
+create table student_duplicate_info_ as select * from student_info;
+
+select * from student_duplicate_info_;
+
+create table clg_dup_info as select c_id,c_name from college_info;
 
 
 
